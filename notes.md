@@ -137,4 +137,42 @@ Upgrade microservices
 Microservices need to be Observable with centralized logs, health check endpoints
 
 
+========================================================================================
+Part 2
+
+Tests for Microservices
+
+Test Pyramid-
+Base = Unit Tests
+Middle = Integration testing
+Top = UI tests
+
+Unit tests are for "business logic"- does the program do what it is designed to do? This does not include how other services interact with the layer being tested. Simply the core of the program is being tested
+
+Integration testing is when layers begin to come together for testing- this means that software modules are combined and tested as a group to ensure the program doesn't fail when ran as a whole. This occurs after unit testing and before validation testing.
+
+UI testing, or user interface testing is the testing that happens after integration testing to ensure the interface doesn't impede the user's ability to run the program. This means that clicking in the wrong spot doesn't crash the program or cause unforeseen errors.
+
+UI Testing is the most difficult and longest testing because any changes to the HTML code can alter how it is run. Additionally it is the most difficult to automate because computers can't test for aesthetics yet, that is actually done easier with human eyes to make sure the interfce looks generally correct.
+
+It is really important to automate testing in order to cut down on time during testing. Testing should also be continuous and not left to the end because if errors happen it is more difficult to find where in the code it is happening if all the code is being tested at once.
+
+End to End tests are tests that involve testing an app from beginning to end of the user experience. This is to simulate the real life experience of using the program.
+
+Mocking is when in the test you can create a fake version of an external or internal service. It is an object that clones the behavior of a real object.
+
+
+Authentication VS Authorization
+
+Authentication is when you verify that a user is who they claim to be. This can be done with Bearer Tokens
+
+Bearer Tokens are apart of OAuth2.0 that are given to a user- they expire after a certain period of time to help minimize risks. Bearer tokens are generated as a form of ID so that the user can verify who they are to get access to their profile.
+
+In microservices it is important to consider using a third party to handle authentication and authorization- it is a huge step and by outsourcing to a company that specializes and maintains their code and constantly tests for security risks, it is the safest route for the program/progammers/users
+
+Authorization is exactly where users are ALLOWED to go when they've been authenticated. This means that users might not be allowed to create new objects or alter items on a website, only admin can do that!
+
+Authorization comes down to "Roles", users and admin
+
+
 
